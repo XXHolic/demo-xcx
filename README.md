@@ -18,3 +18,4 @@ Ebook collection
 感受：一些当时被炒的很热的概念，其实很早就被提出来了。
 
 ### [《关键对话》](https://pan.baidu.com/s/1KHMhHY9rMkv7bvg-P4goIA)h6hh
+感受：这个跟妹子聊天的时候也是很有用的！
