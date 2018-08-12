@@ -3,7 +3,7 @@ Ebook collection
 
 以下是个人接触过，感觉有意思和启示的书籍。链接后面为提取密码。epub 格式的文件，推荐使用软件 [Neat Reader](https://www.neat-reader.cn/)。
 
-### [《反脆弱》](链接：https://pan.baidu.com/s/1p7cfRyHuW6-KqIYiq49QVA)ftqz
+### [《反脆弱》](https://pan.baidu.com/s/1p7cfRyHuW6-KqIYiq49QVA)ftqz
 感受：碰到随机事件的时候，思考一下，可能有意向不到的结果。
 
 ### [《关键对话》](https://pan.baidu.com/s/1KHMhHY9rMkv7bvg-P4goIA)h6hh
