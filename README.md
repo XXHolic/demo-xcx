@@ -23,3 +23,12 @@ Ebook collection
 
 ### [《软技能：代码之外的生存指南》](https://pan.baidu.com/s/1Gf6GKoYovhhc49gSMeTT6w)muyg
 感受：方方面面都了解点不坏。
+
+## 技术类
+### [《JavaScript高级程序设计（第3版）》](https://pan.baidu.com/s/1cOim1y2IePyW5YlGqNOfVw)t7up
+
+### [《JavaScript权威指南(第6版)(中文版)》](https://pan.baidu.com/s/1J7_BQfrMIyKESVq0q73e-w)sopm
+
+### [《CSS权威指南（第3版）》](https://pan.baidu.com/s/1w4IU8a9pfFAwwrLPjMbLGA)im0h
+
+### [《前端架构设计》](https://pan.baidu.com/s/1mf5g2q_ScUotsEl3dDzuhg)c2pb
