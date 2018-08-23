@@ -3,6 +3,9 @@ Ebook collection
 
 以下是个人接触过，感觉有意思和启示的书籍。链接后面为提取密码。epub 格式的文件，推荐使用软件 [Neat Reader](https://www.neat-reader.cn/)。
 
+### [《房间里的大象：生活中的沉默和否认》](https://pan.baidu.com/s/1oIdBH1ciWoHqeUl1qLtVeA)me0z
+感受：估计都有这样的不好的经历。
+
 ### [《反脆弱》](https://pan.baidu.com/s/1p7cfRyHuW6-KqIYiq49QVA)ftqz
 感受：碰到随机事件的时候，思考一下，可能有意向不到的结果。
 
@@ -19,7 +22,7 @@ Ebook collection
 感受：好的理由，一个就足够。
 
 ### [《穷查理宝典：查理·芒格的智慧箴言录》](https://pan.baidu.com/s/1mO8i5b73R-CZdC6gPbuo0Q)gh7d
-感受：多元思维模型这个还是有点意思。
+感受：多元思维模型这个不是想用就能用。
 
 ### [《软技能：代码之外的生存指南》](https://pan.baidu.com/s/1Gf6GKoYovhhc49gSMeTT6w)muyg
 感受：方方面面都了解点不坏。
