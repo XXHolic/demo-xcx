@@ -4,7 +4,7 @@ Ebook collection
 以下是个人接触过，感觉有意思和启示的书籍。链接后面为提取密码。epub 格式的文件，推荐使用软件 [Neat Reader](https://www.neat-reader.cn/)。
 
 ### [《房间里的大象：生活中的沉默和否认》](https://pan.baidu.com/s/1oIdBH1ciWoHqeUl1qLtVeA)me0z
-感受：估计都有这样的不好的经历。
+感受：估计都有这样不好的经历。
 
 ### [《反脆弱》](https://pan.baidu.com/s/1p7cfRyHuW6-KqIYiq49QVA)ftqz
 感受：碰到随机事件的时候，思考一下，可能有意向不到的结果。
