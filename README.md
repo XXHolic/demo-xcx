@@ -4,6 +4,7 @@ Ebook collection
 以下是个人接触过，感觉有意思和启示的书籍。链接后面为提取密码。epub 格式的文件，推荐使用软件 [Neat Reader](https://www.neat-reader.cn/)。
 
 ### [《书读完了》](https://pan.baidu.com/s/17HszppCH5RA8XT201PFqlg)br8i
+感受：第一辑的开头和后记相对应，如果很好奇开头的问题，可以先看后记。
 
 ### [《房间里的大象：生活中的沉默和否认》](https://pan.baidu.com/s/1oIdBH1ciWoHqeUl1qLtVeA)me0z
 感受：估计都有这样不好的经历。
