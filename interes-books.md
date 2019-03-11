@@ -17,6 +17,7 @@
 * [理想国与哲人王](#dream-and-philosophy)
 * [一章木椅](#wood-chair)
 * [当世界年纪还小的时候](#world-childhood)
+* [写在救援側面-无国界医生的故事](#no-boundary-doctors)
 
 ## <a name="garlic-and-apphires"></a> 千面美食家
 作者: 露絲．賴舒爾
@@ -185,4 +186,10 @@ ISBN: 9787108028419
 定价: 28.00元
 装帧: 平装
 ISBN: 9787536539433
+
+## <a name="no-boundary-doctor"></a> 写在救援側面-无国界医生的故事
+出版社: 無國界醫生香港辦事處
+出版年: 11/2004
+定价: 60
+ISBN: 9789628326631
 
