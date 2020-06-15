@@ -1,0 +1,30 @@
+{
+  "id": "1886515",
+  "name": "demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "测试项目字体图标",
+  "glyphs": [
+    {
+      "icon_id": "11487981",
+      "name": "all",
+      "font_class": "all",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "11488206",
+      "name": "user center",
+      "font_class": "usercenter",
+      "unicode": "e773",
+      "unicode_decimal": 59251
+    },
+    {
+      "icon_id": "11674090",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e7a7",
+      "unicode_decimal": 59303
+    }
+  ]
+}
