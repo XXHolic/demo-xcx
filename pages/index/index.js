@@ -9,12 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperOptions:{
-      background: [{src:'https://xxholic.github.io/segment/images/69/poster.jpg',mode:'aspectFill'},{src:'https://xxholic.github.io/segment/images/70/poster.jpg',mode:'aspectFit'},{src:'https://xxholic.github.io/segment/images/71/poster.jpg',mode:'aspectFit'}],
-      indicatorDots: true,
-      vertical: false,
-      autoplay: true,
-      interval: 2000,
-      duration: 500
+
     }
   },
   //事件处理函数
@@ -24,6 +19,20 @@ Page({
     })
   },
   onLoad: function () {
+
+    setTimeout(()=>{
+      this.setData({
+        swiperOptions:{
+          background: [{src:'https://xxholic.github.io/segment/images/69/poster.jpg',mode:'aspectFill'},{src:'https://xxholic.github.io/segment/images/70/poster.jpg',mode:'aspectFit'},{src:'https://xxholic.github.io/segment/images/71/poster.jpg',mode:'aspectFit'}],
+          indicatorDots: true,
+          vertical: false,
+          autoplay: true,
+          interval: 2000,
+          duration: 500
+        }
+      })
+    },3000)
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

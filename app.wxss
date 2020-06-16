@@ -12,20 +12,24 @@
   box-sizing: border-box;
 }
 
+/* flex 左右居中 */
+.flex-hc {
+  display: flex;
+  justify-content: center;
+}
+
+/* flex 上下居中 */
+.flex-vc {
+  display: flex;
+  align-items: center;
+}
+
 .df {
   display: flex;
 }
 
 .f-dc {
   flex-direction: column;
-}
-
-.flex-jc {
-  justify-content: center;
-}
-
-.flex-ai {
-  align-items: center;
 }
 
 .flex-1 {

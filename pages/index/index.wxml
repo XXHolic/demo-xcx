@@ -1,38 +1,14 @@
 <!--index.wxml-->
 <view class="main-container">
   <view class="main-header">
-    <view class="index-search bsb df flex-ai">
+    <view class="index-search bsb df flex-vc">
       <icon class="icon-small" type="search" size="20"></icon>
     </view>
   </view>
   <view class="main-body">
-    <view>
-      <swiper indicator-dots="{{swiperOptions.indicatorDots}}"
-        autoplay="{{swiperOptions.autoplay}}" interval="{{swiperOptions.interval}}" duration="{{swiperOptions.duration}}">
-        <block wx:for="{{swiperOptions.background}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item">
-              <image style="height: 100%;" src="{{item.src}}" mode="{{item.mode}}"></image>
-            </view>
-          </swiper-item>
-        </block>
-      </swiper>
-    </view>
+    <swiper swiperOptions="{{swiperOptions}}"></swiper>
   </view>
   <view class="main-footer">
-    <view class="index-footer df flex-jc flex-ai">
-      <view class="flex-1 df f-dc flex-ai footer-active">
-        <view class="iconfont iconhome index-icont-font"></view>
-        <view>首页</view>
-      </view>
-      <view class="flex-1 df f-dc flex-ai">
-        <view class="iconfont iconall index-icont-font"></view>
-        <view>分类</view>
-      </view>
-      <view class="flex-1 df f-dc flex-ai">
-        <view class="iconfont iconusercenter index-icont-font"></view>
-        <view>我的</view>
-      </view>
-    </view>
+    <footer></footer>
   </view>
 </view>

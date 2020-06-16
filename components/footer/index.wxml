@@ -1,0 +1,15 @@
+<!-- 组件模板 -->
+<view class="index-footer flex-hc flex-ai">
+	<view class="flex-1 f-dc flex-vc footer-active">
+		<view class="iconfont iconhome index-icont-font"></view>
+		<view>首页</view>
+	</view>
+	<view class="flex-1 f-dc flex-vc">
+		<view class="iconfont iconall index-icont-font"></view>
+		<view>分类</view>
+	</view>
+	<view class="flex-1 f-dc flex-vc">
+		<view class="iconfont iconusercenter index-icont-font"></view>
+		<view>我的</view>
+	</view>
+</view>
