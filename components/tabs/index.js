@@ -7,11 +7,20 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    swiperOptions:{
-      type: Object,
-      value:{
-        background: [],
-      }
+    activeKey:{
+      type: String,
+      value:'1'
+    },
+    tabs:{
+      type:Array,
+      value:[
+        {text:'头条',value:'1'},
+        {text:'热门',value:'2'}
+      ]
+    },
+    onChange:{
+      type:Function,
+      value:() => {}
     }
   },
 
@@ -33,12 +42,22 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handlerChange:function(e) {
+      const dataSet = e.target.dataset;
+      // console.info({dataSet})
+      const {tabvalue} = dataSet;
+      if (tabvalue && tabvalue !== this.data.activeKey) {
+        this.setData({
+          activeKey:tabvalue
+        });
+        this.triggerEvent("onChange",{value:tabvalue})
+      }
+    }
   },
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行
-      console.info('attached',this.data)
+      // console.info('attached',this.data)
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行

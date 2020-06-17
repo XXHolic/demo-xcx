@@ -1,0 +1,16 @@
+.tabs {
+  height: 70rpx;
+  /* line-height: 80rpx; */
+}
+
+.tabs-text {
+  position: relative;
+  display: inline-block;
+  font-size: 30rpx;
+}
+
+.tabs-text.tabs-active {
+  border-bottom: 1px solid #ffc0cb;
+  color: #ffc0cb;
+  line-height: 70rpx;
+}

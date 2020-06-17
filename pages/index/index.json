@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "footer":"/components/footer/index",
-    "swiper":"/components/swiper/index"
+    "swiper":"/components/swiper/index",
+    "tabs":"/components/tabs/index"
   }
 }

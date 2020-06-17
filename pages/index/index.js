@@ -12,6 +12,9 @@ Page({
 
     }
   },
+  handlerTabChange:({detail})=>{
+    console.info('change detail',detail)
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

@@ -1,7 +1,7 @@
 <!-- 组件模板 -->
 <view>
 	<swiper indicator-dots="{{swiperOptions.indicatorDots}}" autoplay="{{swiperOptions.autoplay}}" interval="{{swiperOptions.interval}}" duration="{{swiperOptions.duration}}">
-		<block wx:for="{{swiperOptions.background}}" wx:key="*this">
+		<block wx:for="{{swiperOptions.background}}" wx:key="src">
 			<swiper-item>
 				<view class="swiper-item">
 					<image style="height: 100%;" src="{{item.src}}" mode="{{item.mode}}"></image>

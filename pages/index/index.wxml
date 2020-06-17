@@ -6,7 +6,8 @@
     </view>
   </view>
   <view class="main-body">
-    <swiper swiperOptions="{{swiperOptions}}"></swiper>
+    <tabs bind:onChange="handlerTabChange"></tabs>
+    <!-- <swiper swiperOptions="{{swiperOptions}}"></swiper> -->
   </view>
   <view class="main-footer">
     <footer></footer>
