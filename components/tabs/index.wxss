@@ -1,4 +1,5 @@
 .tabs {
+  padding: 0 90rpx;
   height: 70rpx;
   /* line-height: 80rpx; */
 }

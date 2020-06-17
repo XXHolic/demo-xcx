@@ -21,6 +21,14 @@ Page({
       url: '../logs/logs'
     })
   },
+  scroll(e) {
+    console.log(e)
+  },
+  scrollToTop() {
+    this.setAction({
+      scrollTop: 0
+    })
+  },
   onLoad: function () {
 
     setTimeout(()=>{
