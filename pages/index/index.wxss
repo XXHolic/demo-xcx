@@ -1,13 +1,4 @@
 /**index.wxss**/
-.index-search {
-  margin: 0 auto;
-  border-radius: 30rpx;
-  padding-left: 10rpx;
-  width: 700rpx;
-  height: 60rpx;
-  background-color: #eee;
-}
-
 .scroll-view_H{
   white-space: nowrap;
 }

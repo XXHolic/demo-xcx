@@ -1,9 +1,7 @@
 <!--index.wxml-->
 <view class="main-container">
   <view class="main-header">
-    <view class="index-search bsb df flex-vc">
-      <icon class="icon-small" type="search" size="20"></icon>
-    </view>
+    <search></search>
     <tabs bind:onChange="handlerTabChange"></tabs>
   </view>
   <view class="main-body">

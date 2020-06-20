@@ -1,0 +1,6 @@
+<!-- 组件模板 -->
+<view>
+    <view class="index-search bsb df flex-vc">
+      <icon class="icon-small" type="search" size="20"></icon>
+    </view>
+</view>

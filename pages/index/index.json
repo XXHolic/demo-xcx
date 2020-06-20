@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "search":"components/search/index",
     "swiper":"/components/swiper/index",
     "tabs":"/components/tabs/index"
   }

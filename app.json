@@ -36,6 +36,7 @@
     "navigationBarTitleText": "XPOX",
     "navigationBarTextStyle":"black"
   },
+  "lazyCodeLoading": "requiredComponents",
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
