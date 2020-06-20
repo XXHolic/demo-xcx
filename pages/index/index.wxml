@@ -7,15 +7,12 @@
     <tabs bind:onChange="handlerTabChange"></tabs>
   </view>
   <view class="main-body">
-	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+	<!-- <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 			<slot></slot>
       <view id="demo1" class="scroll-view-item demo-text-1"></view>
       <view id="demo2" class="scroll-view-item demo-text-2"></view>
       <view id="demo3" class="scroll-view-item demo-text-3"></view>
       <view id="demo4" class="scroll-view-item demo-text-3"></view>
-	</scroll-view>
-  </view>
-  <view class="main-footer">
-    <footer></footer>
+	</scroll-view> -->
   </view>
 </view>

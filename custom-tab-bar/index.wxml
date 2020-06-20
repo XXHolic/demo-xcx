@@ -1,0 +1,30 @@
+<!-- 组件模板 -->
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="/{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-view style="color: {{selected === index ? selectedColor : color}}">
+			<cover-view class="iconfont iconhome index-icont-font"></cover-view>
+			
+		</cover-view>
+  </cover-view>
+</cover-view>
+<!-- <view class="index-footer flex-hc flex-ai">
+	<view class="flex-1 f-dc flex-vc footer-active">
+		<navigator url="/pages/index/index" open-type="switchTab">
+			<view class="iconfont iconhome index-icont-font"></view>
+			<view>首页</view>
+		</navigator>
+	</view>
+	<view class="flex-1 f-dc flex-vc">
+		<navigator url="/pages/category/index" open-type="switchTab">
+			<view class="iconfont iconall index-icont-font"></view>
+			<view>分类</view>
+		</navigator>
+	</view>
+	<view class="flex-1 f-dc flex-vc">
+		<navigator url="/pages/mine/index" open-type="switchTab">
+			<view class="iconfont iconusercenter index-icont-font"></view>
+			<view>我的</view>
+		</navigator>
+	</view>
+</view> -->

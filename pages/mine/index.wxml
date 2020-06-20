@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="main-container">
+  <view class="main-header">
+
+  </view>
+  <view class="main-body">
+  mine
+  </view>
+  <view class="main-footer">
+    <footer></footer>
+  </view>
+</view>

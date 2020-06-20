@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 
-Component({
+Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
@@ -78,15 +78,5 @@ Component({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
-  pageLifetimes: {
-    show() {
-      if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 0
-        })
-      }
-    }
   }
 })

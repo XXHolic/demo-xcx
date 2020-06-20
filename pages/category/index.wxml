@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="main-container">
+  <view class="main-header">
+
+  </view>
+  <view class="main-body">
+  body
+  </view>
+</view>
