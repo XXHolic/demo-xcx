@@ -50,7 +50,6 @@ Component({
   },
   pageLifetimes: {
     show() {
-      console.info('222',this.getTabBar())
       if (typeof this.getTabBar === 'function' && this.getTabBar()) {
         this.getTabBar().setData({
           selected: 1

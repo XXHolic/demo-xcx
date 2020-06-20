@@ -11,7 +11,7 @@
 }
 
 .tabs-text.tabs-active {
-  border-bottom: 1px solid #ffc0cb;
+  border-bottom: 1px solid #e2d6d8;
   color: #ffc0cb;
   line-height: 70rpx;
 }

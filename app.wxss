@@ -3,6 +3,7 @@
 page {
   /* background-color: #fbf9fe; */
   height: 100%;
+  color: #000;
 }
 .main-container {
   font-size: 24rpx;

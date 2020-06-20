@@ -1,11 +1,9 @@
 <!-- 组件模板 -->
 <cover-view class="tab-bar">
   <cover-view class="tab-bar-border"></cover-view>
-  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="/{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
-    <cover-view style="color: {{selected === index ? selectedColor : color}}">
-			<cover-view class="iconfont iconhome index-icont-font"></cover-view>
-			
-		</cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item flex-hc flex-vc" data-path="/{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image class="tab-bar-icon" src="/{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view class="tab-bar-text" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
   </cover-view>
 </cover-view>
 <!-- <view class="index-footer flex-hc flex-ai">

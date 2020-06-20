@@ -8,18 +8,24 @@
   "tabBar": {
     "custom": true,
     "color": "#000000",
-    "selectedColor": "#000000",
+    "selectedColor": "#ffc0cb",
     "backgroundColor": "#000000",
     "list": [
       {
         "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png",
         "text": "首页"
       }, 
       {
         "pagePath": "pages/category/index",
+        "iconPath": "images/category.png",
+        "selectedIconPath": "images/category-active.png",
         "text": "分类"
       }, {
-          "pagePath": "pages/category/index",
+          "pagePath": "pages/mine/index",
+          "iconPath": "images/user-center.png",
+          "selectedIconPath": "images/user-center-active.png",
           "text": "我的"
         }
     ]

@@ -16,17 +16,25 @@ Component({
   data: {
     selected: 0,
     color: "#7A7E83",
-    selectedColor: "#3cc51f",
-    list: [{
-      pagePath: "pages/index/index",
-      text: "首页"
-    }, {
-      pagePath: "pages/category/index",
-      text: "分类"
-    }, {
-      pagePath: "pages/category/index",
-      text: "我的"
-    }
+    selectedColor: "#ffc0cb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png",
+        "text": "首页"
+      }, 
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "images/category.png",
+        "selectedIconPath": "images/category-active.png",
+        "text": "分类"
+      }, {
+          "pagePath": "pages/mine/index",
+          "iconPath": "images/user-center.png",
+          "selectedIconPath": "images/user-center-active.png",
+          "text": "我的"
+        }
     ]
   },
 
