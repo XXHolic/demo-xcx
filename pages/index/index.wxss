@@ -1,4 +1,8 @@
 /**index.wxss**/
+.index-tab {
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.33);
+}
+
 .scroll-view_H{
   white-space: nowrap;
 }

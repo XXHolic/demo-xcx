@@ -1,5 +1,5 @@
 <!-- 组件模板 -->
-<view class="tabs flex-vc" bindtap="handlerChange">
+<view class="{{className}} tabs flex-vc" bindtap="handlerChange">
 	<view class="flex-1 tc" wx:for="{{tabs}}" wx:key="value">
 		<view data-tabValue="{{item.value}}" wx:if="{{item.value == activeKey}}" class="tabs-text tabs-active">{{item.text}}</view>
 		<view data-tabValue="{{item.value}}" wx:if="{{item.value != activeKey}}" class="tabs-text">{{item.text}}</view>

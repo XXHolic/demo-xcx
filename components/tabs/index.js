@@ -11,6 +11,9 @@ Component({
       type: String,
       value:'1'
     },
+    className:{
+      type: String,
+    },
     tabs:{
       type:Array,
       value:[

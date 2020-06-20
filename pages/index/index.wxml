@@ -2,7 +2,7 @@
 <view class="main-container">
   <view class="main-header">
     <search></search>
-    <tabs bind:onChange="handlerTabChange"></tabs>
+    <tabs className="index-tab" bind:onChange="handlerTabChange"></tabs>
   </view>
   <view class="main-body">
 	<!-- <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
