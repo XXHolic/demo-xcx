@@ -16,7 +16,7 @@ Page({
       // console.info('backData')
       setTimeout(() => {
         resolve(backData)
-      },2000)
+      },1000)
     }).then((res) => {
       const {data} = res;
       console.info({data})

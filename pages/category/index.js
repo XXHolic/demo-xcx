@@ -40,7 +40,12 @@ Page({
   },
   handlerTap() {
     wx.switchTab({
-      url: '/pages/index/index'
+      url: '/pages/index/index',
+      success: function (e) {  
+        var page = getCurrentPages().pop();  
+        if (page == undefined || page == null) return;  
+        page.onReady();  
+      }  
     })
   },
   onShow() {
