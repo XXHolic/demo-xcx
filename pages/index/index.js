@@ -12,22 +12,25 @@ Component({
 
     }
   },
-  handlerTabChange:({detail})=>{
-    console.info('change detail',detail)
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  scroll(e) {
-    console.log(e)
-  },
-  scrollToTop() {
-    this.setAction({
-      scrollTop: 0
-    })
+  methods:{
+
+    handlerTabChange:({detail})=>{
+      console.info('change detail',detail)
+    },
+    //事件处理函数
+    bindViewTap: function() {
+      wx.navigateTo({
+        url: '../logs/logs'
+      })
+    },
+    scroll(e) {
+      console.log(e)
+    },
+    scrollToTop() {
+      this.setAction({
+        scrollTop: 0
+      })
+    },
   },
   onLoad: function () {
 

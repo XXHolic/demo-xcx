@@ -6,6 +6,69 @@
   "description": "测试项目字体图标",
   "glyphs": [
     {
+      "icon_id": "3865691",
+      "name": "娱乐",
+      "font_class": "yule",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "7857662",
+      "name": "时尚女装",
+      "font_class": "baobao",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "8815653",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e924",
+      "unicode_decimal": 59684
+    },
+    {
+      "icon_id": "11231999",
+      "name": "video",
+      "font_class": "video",
+      "unicode": "e7bb",
+      "unicode_decimal": 59323
+    },
+    {
+      "icon_id": "11741955",
+      "name": "科技",
+      "font_class": "tubiaozhizuomoban",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "11935653",
+      "name": "movie",
+      "font_class": "movie1",
+      "unicode": "e6be",
+      "unicode_decimal": 59070
+    },
+    {
+      "icon_id": "12442224",
+      "name": "Game",
+      "font_class": "Game",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "7766775",
+      "name": "icon_patriarch",
+      "font_class": "icon_patriarch",
+      "unicode": "eb9a",
+      "unicode_decimal": 60314
+    },
+    {
+      "icon_id": "8106292",
+      "name": "movie",
+      "font_class": "movie",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
       "icon_id": "11487981",
       "name": "all",
       "font_class": "all",

@@ -1,6 +1,6 @@
 /**index.wxss**/
 .index-tab {
-  border-bottom: 2rpx solid rgba(0, 0, 0, 0.33);
+  border-bottom: 2rpx solid #F5F5F5;
 }
 
 .scroll-view_H{
@@ -9,14 +9,8 @@
 .scroll-view-item{
   height: 300rpx;
 }
-.scroll-view-item_H{
-  display: inline-block;
-  width: 100%;
-  height: 300rpx;
-}
 
-.demo-text-1 {
-  background-color: #1AAD19;
-}
+
+
 
 

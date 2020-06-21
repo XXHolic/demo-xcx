@@ -29,12 +29,13 @@ Component({
         "iconPath": "images/category.png",
         "selectedIconPath": "images/category-active.png",
         "text": "分类"
-      }, {
-          "pagePath": "pages/mine/index",
-          "iconPath": "images/user-center.png",
-          "selectedIconPath": "images/user-center-active.png",
-          "text": "我的"
-        }
+      },
+      //  {
+      //     "pagePath": "pages/mine/index",
+      //     "iconPath": "images/user-center.png",
+      //     "selectedIconPath": "images/user-center-active.png",
+      //     "text": "我的"
+      //   }
     ]
   },
 
