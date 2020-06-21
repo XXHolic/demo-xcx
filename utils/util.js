@@ -74,7 +74,7 @@ const getData = () => {
     const countNum = random(1,100);
     const count = countNum + '万';
     const obj = {
-      id:i,
+      id:Math.random(),
       imgSrc:imagLink[imgIndex] || '',
       title:title,
       status:statusArr[statusIndex],

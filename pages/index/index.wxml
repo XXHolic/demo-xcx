@@ -5,7 +5,7 @@
     <tabs className="index-tab" bindonChange="handlerTabChange"></tabs>
   </view>
   <view class="main-body">
-	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="handlerToBottom" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <list source="{{list}}"></list>
 	</scroll-view>
   </view>

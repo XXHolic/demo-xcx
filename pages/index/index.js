@@ -25,8 +25,11 @@ Page({
       })
     })
   },
-  scroll(e) {
-    console.log(e)
+  handlerToBottom(e) {
+    const backData = utils.getData();
+    this.setData({
+      list:[...this.data.list,...backData.data]
+    })
   },
   scrollToTop() {
     this.setAction({
