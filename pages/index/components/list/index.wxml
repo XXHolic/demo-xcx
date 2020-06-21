@@ -4,7 +4,8 @@
   </view>
   <view class="item-right">
     <view class="item-title">{{item.title}}</view>
-    <view class="item-status">{{item.status}}</view>
+    <view class="item-status" wx:if="{{!item.status}}"></view>
+    <view class="item-status item-status-border" wx:if="{{item.status}}">{{item.status}}</view>
     <view class="item-name flex-vc">
       <view class="iconfont iconicon_patriarch item-icon-author"></view>{{item.author}}
     </view>

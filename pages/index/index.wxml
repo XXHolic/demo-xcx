@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="main-container">
   <view class="main-header">
-    <search></search>
-    <tabs className="index-tab" bind:onChange="handlerTabChange"></tabs>
+    <!-- <search></search> -->
+    <tabs className="index-tab" bindonChange="handlerTabChange"></tabs>
   </view>
   <view class="main-body">
 	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">

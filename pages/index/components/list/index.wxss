@@ -37,11 +37,14 @@
   display: inline-block;
   margin-bottom: 6rpx;
   border-radius: 6rpx;
-  border: 2rpx solid #fa5a57;
   padding: 0 4rpx;
   height: 32rpx;
   line-height: 32rpx;
   color: #fa5a57;
+}
+
+.item-status-border {
+  border: 2rpx solid #fa5a57;
 }
 
 .item-name {

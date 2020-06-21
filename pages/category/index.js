@@ -1,4 +1,4 @@
-Component({
+Page({
   data: {
     categoryList:[
       {
@@ -38,14 +38,16 @@ Component({
       },
     ]
   },
-  
-  pageLifetimes: {
-    show() {
-      if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 1
-        })
-      }
+  handlerTap() {
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  },
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      })
     }
   }
 })
