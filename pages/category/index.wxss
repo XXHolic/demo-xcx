@@ -1,27 +1,20 @@
-/**index.wxss**/
-.index-search {
+.category-list {
+  flex-wrap:wrap;
+}
+
+.category-item {
+  width: 25%;
+  height: 200rpx;
+}
+
+.category-icon {
+  margin-bottom: 14rpx;
+  height: 80rpx;
+}
+
+.category-img {
   margin: 0 auto;
-  border-radius: 30rpx;
-  padding-left: 10rpx;
-  width: 700rpx;
-  height: 60rpx;
-  background-color: #eee;
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
 }
-
-.scroll-view_H{
-  white-space: nowrap;
-}
-.scroll-view-item{
-  height: 300rpx;
-}
-.scroll-view-item_H{
-  display: inline-block;
-  width: 100%;
-  height: 300rpx;
-}
-
-.demo-text-1 {
-  background-color: #1AAD19;
-}
-
-

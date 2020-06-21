@@ -2,7 +2,6 @@
   "usingComponents": {
     "search":"components/search/index",
     "list":"components/list/index",
-    "swiper":"/components/swiper/index",
     "tabs":"/components/tabs/index"
   }
 }

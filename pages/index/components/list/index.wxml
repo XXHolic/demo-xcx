@@ -1,15 +1,15 @@
-<view class="list-item">
+<view class="list-item" wx:for="{{source}}" wx:key="id">
   <view class="item-left flex-vc">
-    <image class="item-img" src="/images/poster.jpg"></image>
+    <image class="item-img" src="{{item.imgSrc}}"></image>
   </view>
   <view class="item-right">
-    <view class="item-title">炉石魔幻大片，让你想象不到的事故发生</view>
-    <view class="item-status">百万播放</view>
+    <view class="item-title">{{item.title}}</view>
+    <view class="item-status">{{item.status}}</view>
     <view class="item-name flex-vc">
-      <view class="iconfont iconicon_patriarch item-icon-author"></view>你中有我
+      <view class="iconfont iconicon_patriarch item-icon-author"></view>{{item.author}}
     </view>
     <view class="item-count flex-vc">
-      <view class="iconfont iconmovie item-icon-video"></view>3455.5万
+      <view class="iconfont iconmovie item-icon-video"></view>{{item.count}}
     </view>
   </view>
 </view>

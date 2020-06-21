@@ -1,9 +1,11 @@
 <!--index.wxml-->
 <view class="main-container">
-  <view class="main-header">
-
-  </view>
   <view class="main-body">
-  音乐 游戏 电影 动画 科技 时尚 娱乐
+    <view class="category-list flex-vc">
+      <view class="category-item f-dc flex-hc" wx:for="{{categoryList}}" wx:key="id">
+        <view class="category-icon"><image class="category-img" src="{{item.src}}"></image></view>
+        <view class="tc">{{item.text}}</view>
+      </view>
+    </view>
   </view>
 </view>

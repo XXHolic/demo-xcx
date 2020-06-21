@@ -1,53 +1,44 @@
 Component({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    swiperOptions:{
-
-    }
+    categoryList:[
+      {
+        id:1,
+        src:'/images/icon-movie.png',
+        text:'电影'
+      },
+      {
+        id:2,
+        src:'/images/icon-video.png',
+        text:'动画'
+      },
+      {
+        id:3,
+        src:'/images/icon-music.png',
+        text:'音乐'
+      },
+      {
+        id:4,
+        src:'/images/icon-game.png',
+        text:'游戏'
+      },
+      {
+        id:5,
+        src:'/images/icon-fun.png',
+        text:'娱乐'
+      },
+      {
+        id:6,
+        src:'/images/icon-technology.png',
+        text:'科技'
+      },
+      {
+        id:7,
+        src:'/images/icon-trend.png',
+        text:'时尚'
+      },
+    ]
   },
-  handlerTabChange:({detail})=>{
-    console.info('change detail',detail)
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  scroll(e) {
-    console.log(e)
-  },
-  scrollToTop() {
-    this.setAction({
-      scrollTop: 0
-    })
-  },
-  onLoad: function () {
-
-    setTimeout(()=>{
-      this.setData({
-        swiperOptions:{
-          background: [{src:'https://xxholic.github.io/segment/images/69/poster.jpg',mode:'aspectFill'},{src:'https://xxholic.github.io/segment/images/70/poster.jpg',mode:'aspectFit'},{src:'https://xxholic.github.io/segment/images/71/poster.jpg',mode:'aspectFit'}],
-          indicatorDots: true,
-          vertical: false,
-          autoplay: true,
-          interval: 2000,
-          duration: 500
-        }
-      })
-    },3000)
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+  
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' && this.getTabBar()) {

@@ -7,9 +7,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    onChange:{
-      type:Function,
-      value:() => {}
+    source:{
+      type:Array,
+      value:[]
     }
   },
 
