@@ -49,6 +49,7 @@ const getData = () => {
 
   const imgUsedIndex = [];
   const titleUsedIndex = [];
+  const nameUsedIndex = [];
 
   for(let i=0;i<6;i++) {
     let imgIndex = random(0,19);
@@ -68,6 +69,10 @@ const getData = () => {
     const title = [preText,titleArr[titleIndex],nextText].join('，');
     
     let auIndex = random(0,19);
+    while (nameUsedIndex.indexOf(auIndex)>-1) {
+      auIndex = random(0,19);
+    }
+    nameUsedIndex.push(auIndex);
     const nextAuthText = nameArr[auIndex+1] || '';
     const author = [nameArr[auIndex],nextAuthText].join('');
     const statusIndex = random(0,6);
@@ -92,8 +97,35 @@ const getData = () => {
   }
 
 }
+const dealData = (data) => {
+  const statusArr = ['热播','推荐','火爆','','冷门','','上新'];
+  const formatData = [];
+  console.info({data});
+  for(const ele of Object.values(data)) {
+    const {owner,pic,title,stat} = ele;
+    const {name} = owner;
+    const {view} = stat;
+    const statusIndex = random(0,6);
+    const count = view;
+    const obj = {
+      id:Math.random(),
+      imgSrc: pic || '',
+      title:title,
+      status:statusArr[statusIndex],
+      author:name || '',
+      count: count
+    };
+
+    formatData.push(obj);
+
+  }
+
+  return formatData;
+
+}
 
 module.exports = {
-  formatTime: formatTime,
-  getData:getData
+  formatTime,
+  getData,
+  dealData
 }
