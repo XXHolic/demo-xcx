@@ -84,19 +84,25 @@ Page({
   }
   },
   onReady() {
-    this.getData();
-    // wx.request({
-    //   url: 'https://api.bilibili.com/x/player/playurl?bvid=BV1y7411Q7Eq&cid=171776208&qn=112', 
-    //   data: {},
-    //   header: {
-    //     'content-type': 'application/json', // 默认值
-    //     'referer':'https://www.bilibili.com'
-    //   },
-    //   success (res) {
-    //     console.log('ds',res)
+    // this.getData();
+    wx.request({
+      url: 'https://wap.gamersky.com/news/ent/', 
+      url: 'https://wap.gamersky.com/news/Content-1299150.html',
+      // url: 'https://wap.gamersky.com/news/Content-1299150.html_2',
+      // url: 'https://wap.gamersky.com/news/Content-1299150.html_3', 详情分页
+      // url: 'https://db2.gamersky.com/LabelJsonpAjax.aspx',
+      data: {
+        // jsondata: {"type":"getwaplabelpage","isCache":true,"cacheTime":60,"templatekey":"newsent","id":"1298431","nodeId":"21043","page":2}
+      },
+      header: {
+        'content-type': 'application/json', // 默认值
+        // 'referer':'https://www.bilibili.com'
+      },
+      success (res) {
+        console.log('ds',res)
         
-    //   }
-    // })
+      }
+    })
     // http://api.bilibili.com/x/player/playurl?bvid=BV1y7411Q7Eq&cid=171776208&qn=112
   }
 })
