@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="main-container">
+  <iframe src="https://player.bilibili.com/player.html?aid=328504790&bvid=BV1SA411v7zD&cid=204624846&page=1" width="100%" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  <!-- <iframe src="https://www.bilibili.com/video/BV1SA411v7zD/" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
+</view>

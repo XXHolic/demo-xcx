@@ -26,10 +26,12 @@ Page({
           console.log('ds',res)
           let validData = {};
           let allDataType = [];
+          const exceptData = ['bangumi']; // 排除的数据
           for (const ele of Object.entries(res.data)) {
             const [key,value] = ele;
-            if (key && typeof value === 'object') {
+            if (key && typeof value === 'object'&& exceptData.indexOf(key)===-1) {
               validData[key] = value;
+              validData[key].dataType = key;
               allDataType.push(key);
             }
           }
@@ -82,6 +84,19 @@ Page({
   }
   },
   onReady() {
-    this.getData(true);
+    this.getData();
+    // wx.request({
+    //   url: 'https://api.bilibili.com/x/player/playurl?bvid=BV1y7411Q7Eq&cid=171776208&qn=112', 
+    //   data: {},
+    //   header: {
+    //     'content-type': 'application/json', // 默认值
+    //     'referer':'https://www.bilibili.com'
+    //   },
+    //   success (res) {
+    //     console.log('ds',res)
+        
+    //   }
+    // })
+    // http://api.bilibili.com/x/player/playurl?bvid=BV1y7411Q7Eq&cid=171776208&qn=112
   }
 })

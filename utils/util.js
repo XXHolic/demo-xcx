@@ -100,20 +100,33 @@ const getData = () => {
 const dealData = (data) => {
   const statusArr = ['热播','推荐','火爆','','冷门','','上新'];
   const formatData = [];
+  const {dataType,...validData} = data;
   console.info({data});
-  for(const ele of Object.values(data)) {
-    const {owner,pic,title,stat} = ele;
-    const {name} = owner;
+  for(const ele of Object.values(validData)) {
+    const {owner={},pic,title,stat,bvid} = ele;
+    const {name=""} = owner;
     const {view} = stat;
     const statusIndex = random(0,6);
     const count = view;
+    let href = `https://m.bilibili.com/video/${bvid}`;
+    switch(dataType) {
+      case "douga":
+      case "dance":
+        {
+          href = `https://m.bilibili.com/video/${bvid}`
+        }
+        break;
+    }
+
+
     const obj = {
       id:Math.random(),
       imgSrc: pic || '',
       title:title,
       status:statusArr[statusIndex],
       author:name || '',
-      count: count
+      count: count,
+      href:href
     };
 
     formatData.push(obj);

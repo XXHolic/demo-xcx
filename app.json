@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/category/index",
     "pages/mine/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/video/index"
   ],
   "tabBar": {
     "custom": true,
@@ -38,5 +39,8 @@
   },
   "lazyCodeLoading": "requiredComponents",
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx7564fd5313d24844"
+  ]
 }
