@@ -25,27 +25,48 @@ Page({
     hasShowedData:[],
     list:[],
     deviceMsg:{},
+    pageIndex:0
     // userInfo: {},
     // hasUserInfo: false,
     // canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
-  getData({params}) {
+  getData(params = {}) {
+    const {list,pageIndex} = this.data;
+    const pageNum = pageIndex + 1;
+    if (pageNum>3) {
+      this.setData({
+        pageIndex:pageNum
+      })
+      return;
+    }
+    const {} = params;
     const _that = this;
+    const reqUrl = `https://xxholic.github.io/demo-images/data/ym/list${pageNum}.json`;
     wx.request({
-      method:'POST',
+      method:'GET',
       // url: 'https://wap.gamersky.com/news/ent/', 
-      url: 'https://appapi2.gamersky.com/v5/getCMSNewsList',
-      // url: 'https://wap.gamersky.com/news/Content-1299150.html',
-      // url: 'https://wap.gamersky.com/news/Content-1299150.html_2',
-      // url: 'https://wap.gamersky.com/news/Content-1299150.html_3', 详情分页
-      // url: 'https://db2.gamersky.com/LabelJsonpAjax.aspx',
-      data: params,
-      header: {
-        'content-type': 'application/json', // 默认值
-      },
+      url: reqUrl,
       success (res) {
         console.log('ds',res)
-        
+        const {result} = res.data;
+        const formatData = result.map(ele => {
+          const {id,thumbnails,updateTime,commentsCount,Title} = ele;
+          const imgSrc = thumbnails[0];
+          const imgSrcSplit = imgSrc.split('/');
+          const picSrc = 'https://xxholic.github.io/demo-images/ym/cover/'+imgSrcSplit[imgSrcSplit.length-1]
+          const time = updateTime.replace(/T/g,' ')
+          return {
+            id,
+            picSrc,
+            updateTime:time,
+            count:commentsCount,
+            title:Title
+          }
+        })
+        _that.setData({
+          list:[...list,...formatData],
+          pageIndex:pageNum
+        });
       }
     })
   },
@@ -69,28 +90,6 @@ Page({
   }
   },
   onReady() {
-    // this.getData();
-    wx.getSystemInfo({
-      success:(res) => {
-       const deviceMsg = utils.formatReqParms(res)
-       const reqParams = {
-        request:{...tab1Req},
-        ...deviceMsg
-      }
-      console.info('testData',testData)
-       this.setData({
-        deviceMsg:deviceMsg,
-        // list:testData.result
-       })
-      //  this.getData({params:reqParams});
-      },
-      fail:() => {
-
-      },
-      complete:() => {
-
-      }
-    })
-
+    this.getData();
   }
 })
