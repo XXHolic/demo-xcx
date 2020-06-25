@@ -1,5 +1,20 @@
 const utils = require('../../utils/util.js');
-
+const {testData} = require('./testData.js');
+const tab1Req = {
+  "topicIds": "",
+  "nodeIds": "",
+  "tagIds": "",
+  "tags": "动态图",
+  "GameLib": "0",
+  "systemFieldNames": "DefaultPicUrl",
+  "modelFieldNames": "Title,Author,ThumbnailsPicUrl,updateTime",
+  "UpdateTime": 0,
+  "order": "timeDesc",
+  "recommendedIndex": "0",
+  "pageIndex": 1,
+  "pageSize": 20,
+  "cacheMinutes": 1
+}
 //获取应用实例
 const app = getApp()
 
@@ -9,60 +24,30 @@ Page({
     allData:null,
     hasShowedData:[],
     list:[],
+    deviceMsg:{},
     // userInfo: {},
     // hasUserInfo: false,
     // canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
-  getData(update) {
+  getData({params}) {
     const _that = this;
-    if (!this.data.allData || update) {
-      wx.request({
-        url: 'https://www.bilibili.com/index/ding.json', 
-        data: {},
-        header: {
-          'content-type': 'application/json', // 默认值
-        },
-        success (res) {
-          console.log('ds',res)
-          let validData = {};
-          let allDataType = [];
-          const exceptData = ['bangumi']; // 排除的数据
-          for (const ele of Object.entries(res.data)) {
-            const [key,value] = ele;
-            if (key && typeof value === 'object'&& exceptData.indexOf(key)===-1) {
-              validData[key] = value;
-              validData[key].dataType = key;
-              allDataType.push(key);
-            }
-          }
-
-          const firstDataKey = allDataType[0];
-          const firstData = validData[firstDataKey];
-          const formatData = utils.dealData(firstData);
-          _that.setData({
-            list: formatData,
-            allData:validData,
-            hasShowedData:[firstDataKey],
-            allDataType
-          })
-        }
-      })
-    } else {
-      let startIndex = 1;
-      const {list,allData,hasShowedData,allDataType} = this.data;
-      let hasShowedDataCopy = [...hasShowedData];
-      while(hasShowedData.indexOf(allDataType[startIndex])>-1) {
-        startIndex ++;
+    wx.request({
+      method:'POST',
+      // url: 'https://wap.gamersky.com/news/ent/', 
+      url: 'https://appapi2.gamersky.com/v5/getCMSNewsList',
+      // url: 'https://wap.gamersky.com/news/Content-1299150.html',
+      // url: 'https://wap.gamersky.com/news/Content-1299150.html_2',
+      // url: 'https://wap.gamersky.com/news/Content-1299150.html_3', 详情分页
+      // url: 'https://db2.gamersky.com/LabelJsonpAjax.aspx',
+      data: params,
+      header: {
+        'content-type': 'application/json', // 默认值
+      },
+      success (res) {
+        console.log('ds',res)
+        
       }
-      const dataType = allDataType[startIndex];
-      const showData = allData[dataType];
-      hasShowedDataCopy.push(dataType);
-      const formatData = utils.dealData(showData);
-      this.setData({
-        hasShowedData:hasShowedDataCopy,
-        list:[...list,...formatData]
-      })
-    }
+    })
   },
   handlerToBottom(e) {
     this.getData();
@@ -85,24 +70,27 @@ Page({
   },
   onReady() {
     // this.getData();
-    wx.request({
-      url: 'https://wap.gamersky.com/news/ent/', 
-      url: 'https://wap.gamersky.com/news/Content-1299150.html',
-      // url: 'https://wap.gamersky.com/news/Content-1299150.html_2',
-      // url: 'https://wap.gamersky.com/news/Content-1299150.html_3', 详情分页
-      // url: 'https://db2.gamersky.com/LabelJsonpAjax.aspx',
-      data: {
-        // jsondata: {"type":"getwaplabelpage","isCache":true,"cacheTime":60,"templatekey":"newsent","id":"1298431","nodeId":"21043","page":2}
+    wx.getSystemInfo({
+      success:(res) => {
+       const deviceMsg = utils.formatReqParms(res)
+       const reqParams = {
+        request:{...tab1Req},
+        ...deviceMsg
+      }
+      console.info('testData',testData)
+       this.setData({
+        deviceMsg:deviceMsg,
+        // list:testData.result
+       })
+      //  this.getData({params:reqParams});
       },
-      header: {
-        'content-type': 'application/json', // 默认值
-        // 'referer':'https://www.bilibili.com'
+      fail:() => {
+
       },
-      success (res) {
-        console.log('ds',res)
-        
+      complete:() => {
+
       }
     })
-    // http://api.bilibili.com/x/player/playurl?bvid=BV1y7411Q7Eq&cid=171776208&qn=112
+
   }
 })

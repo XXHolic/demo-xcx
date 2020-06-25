@@ -7,6 +7,8 @@
   <view class="main-body">
 	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="handlerToBottom" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <list source="{{list}}"></list>
+    <image class="item-img" src="http://wx2.sinaimg.cn/large/7c12379bly1gg3f3da429g206o06ou18.gif"></image>
+    
 	</scroll-view>
   </view>
 </view>

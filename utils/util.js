@@ -15,7 +15,24 @@ const formatNumber = n => {
 }
 
 const random = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.round(Math.random() * (max - min)) + min;
+}
+
+/**
+ * 使用 fromCharCode 方法
+ * @param {*} type 
+ * a-z 十进制对应 97-122
+ * A-Z 十进制对应 65-90
+ */
+const randomLetter = (type='upper') => {
+  let letter = 'A';
+  if (type === 'upper') {
+    letter = String.fromCharCode(random(65,90));
+  } else {
+    letter = String.fromCharCode(random(97,122));
+  }
+
+  return letter;
 }
 
 const getData = () => {
@@ -137,8 +154,67 @@ const dealData = (data) => {
 
 }
 
+const randomDeviceId = (type) => {
+  let deviceId = '';
+  // deviceId 安卓示例：862622048437469，ios 示例：5FA5B68A-7B2D-4364-99E3-E8B227D35248
+  if (type === 'android') {
+    const example = '862622048437469';
+    const arr = Array.from({length:example.length})
+    const formatArr = arr.map(ele => {
+      return random(0,9)
+    })
+    deviceId = formatArr.join('');
+  } else {
+    const example = '5FA5B68A-7B2D-4364-99E3-E8B227D35248';
+    const exampleSplit = example.split('-');
+    const arr = exampleSplit.map(ele => {
+      return Array.from({length:ele.length});
+    })
+    const formatNew = arr.map(ele => {
+      const newData = ele.map(el => {
+        const result = random(0,1)?random(0,9):randomLetter('upper');
+        return result;
+      });
+      return newData.join('');
+    })
+    deviceId = formatNew.join('-');
+  }
+
+  return deviceId;
+}
+
+const formatReqParms = (data) => {
+  const {platform='ios',model,system} = data;
+  const appData = {
+    iOS:'GSApp(iOS)',
+    android:'GSAPP'
+  };
+  const appVersionData = ['5.5.23','5.5.22','5.5.21','5.5.20','5.5.19'];
+  const os = platform.toLocaleLowerCase().indexOf('ios')?'iOS':'android';
+  const app = appData[os];
+  const osArr = system.split(' ');
+  const osVersion = osArr[1];
+  // const deviceType = model;
+  const deviceType = 'iPhone10,1';
+  const deviceId = randomDeviceId(platform);
+  const appVersion = appVersionData[random(0,4)];
+
+  let params = {
+    app,
+    deviceType,
+    appVersion,
+    os,
+    osVersion,
+    deviceId
+  }
+
+  // console.info(params)
+  return params;
+}
+
 module.exports = {
   formatTime,
   getData,
-  dealData
+  dealData,
+  formatReqParms
 }

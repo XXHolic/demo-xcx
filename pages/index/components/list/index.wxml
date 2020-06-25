@@ -2,17 +2,17 @@
   <!-- app-id="wx7564fd5313d24844" target="miniProgram"  open-type="navigate" -->
   	<navigator class="df" style="width: 100%" url="/pages/video/index?href={{item.href}}" extra-data="" version="release">
   		<view class="item-left flex-vc">
-  			<image class="item-img" src="{{item.imgSrc}}"></image>
+  			<image class="item-img" src="{{item.thumbnails[0]}}"></image>
   		</view>
   		<view class="item-right">
-  			<view class="item-title">{{item.title}}</view>
+  			<view class="item-title">{{item.Title}}</view>
   			<view class="item-status" wx:if="{{!item.status}}"></view>
   			<view class="item-status item-status-border" wx:if="{{item.status}}">{{item.status}}</view>
   			<view class="item-name flex-vc">
-  				<view class="iconfont iconicon_patriarch item-icon-author"></view>{{item.author}}
+  				<view class="iconfont iconicon_patriarch item-icon-author"></view>{{item.updateTime}}
   			</view>
   			<view class="item-count flex-vc">
-  				<view class="iconfont iconmovie item-icon-video"></view>{{item.count}}
+  				<view class="iconfont iconmovie item-icon-video"></view>{{item.commentsCount}}
   			</view>
   		</view>
   	</navigator>
