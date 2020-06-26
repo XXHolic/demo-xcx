@@ -1,29 +1,27 @@
-const utils = require('../../utils/util.js');
+const {reqDetailPre} = require('../../utils/util.js');
 
 Page({
   data: {
+    time:'',
+    content:[""],
+    title:''
   },
   onLoad (options) {
-    console.log('fds',options.id);
-    wx.getSystemInfo({
-      success:(res) => {
-       const deviceMsg = utils.formatReqParms(res)
-       const reqParams = {
-        request:{...tab1Req},
-        ...deviceMsg
-      }
-      console.info('testData',testData)
-       this.setData({
-        deviceMsg:deviceMsg,
-        // list:testData.result
-       })
-      //  this.getData({params:reqParams});
-      },
-      fail:() => {
-
-      },
-      complete:() => {
-
+    // console.log('fds',options.id);
+    const id = options.id || '1294195';
+    const _that = this;
+    const reqUrl = `${reqDetailPre}${id}.json`;
+    wx.request({
+      method:'GET',
+      url: reqUrl,
+      success (res) {
+        console.log('ds',res)
+        const {title,time,content} = res.data;
+        _that.setData({
+          title,
+          content,
+          time:time.replace(/T/g,' ')
+        });
       }
     })
   }

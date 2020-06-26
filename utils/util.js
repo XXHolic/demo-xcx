@@ -212,6 +212,7 @@ const formatReqParms = (data) => {
 }
 
 const reqListPre = 'https://xxholic.github.io/demo-images/data/ym/'
+const reqDetailPre = 'https://xxholic.github.io/demo-images/data/ym-detail/'
 const coverPre = 'https://xxholic.github.io/demo-images/ym/cover/'
 const reqListDataMap = {
   '0':`${reqListPre}list`,
@@ -227,5 +228,6 @@ module.exports = {
   dealData,
   formatReqParms,
   reqListDataMap,
-  coverPre
+  coverPre,
+  reqDetailPre
 }

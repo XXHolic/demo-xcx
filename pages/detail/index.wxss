@@ -1,0 +1,19 @@
+.container-detail {
+  padding: 20rpx;
+}
+
+.detail-title {
+  font-weight: bold;
+  font-size: 50rpx;
+}
+
+.detail-time {
+  padding: 20rpx 0 30rpx 0;
+  color: #999;
+}
+
+.detail-img {
+  margin-bottom: 20rpx;
+  width: 100%;
+  /* height: auto; */
+}

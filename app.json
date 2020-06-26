@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/detail/index",
     "pages/category/index",
     "pages/mine/index",
-    "pages/logs/logs",
-    "pages/detail/index"
+    "pages/logs/logs"
   ],
   "tabBar": {
     "custom": true,
