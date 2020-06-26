@@ -9,7 +9,7 @@ Component({
   properties: {
     activeKey:{
       type: String,
-      value:'1'
+      value:'0'
     },
     className:{
       type: String,
@@ -17,8 +17,8 @@ Component({
     tabs:{
       type:Array,
       value:[
-        {text:'头条',value:'1'},
-        {text:'热门',value:'2'}
+        {text:'头条',value:'0'},
+        {text:'热门',value:'1'}
       ]
     },
     onChange:{

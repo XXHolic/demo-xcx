@@ -156,7 +156,6 @@ const dealData = (data) => {
 
 const randomDeviceId = (type) => {
   let deviceId = '';
-  // deviceId 安卓示例：862622048437469，ios 示例：5FA5B68A-7B2D-4364-99E3-E8B227D35248
   if (type === 'android') {
     const example = '862622048437469';
     const arr = Array.from({length:example.length})
@@ -212,9 +211,21 @@ const formatReqParms = (data) => {
   return params;
 }
 
+const reqListPre = 'https://xxholic.github.io/demo-images/data/ym/'
+const coverPre = 'https://xxholic.github.io/demo-images/ym/cover/'
+const reqListDataMap = {
+  '0':`${reqListPre}list`,
+  '1':`${reqListPre}jlist`,
+  '2':`${reqListPre}hlist`,
+  '3':`${reqListPre}xlist`,
+}
+
+
 module.exports = {
   formatTime,
   getData,
   dealData,
-  formatReqParms
+  formatReqParms,
+  reqListDataMap,
+  coverPre
 }

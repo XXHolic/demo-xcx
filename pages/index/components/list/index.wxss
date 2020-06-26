@@ -53,8 +53,8 @@
 
 .item-icon-author,.item-icon-video {
   margin-right: 6rpx;
-  border: 2rpx solid #999;
+  /* border: 2rpx solid #999; */
   border-radius: 4rpx;
-  padding: 0 2rpx;
-  font-size: 22rpx;
+  /* padding: 0 2rpx; */
+  font-size: 30rpx;
 }

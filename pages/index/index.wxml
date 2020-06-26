@@ -2,12 +2,12 @@
 <view class="main-container">
   <view class="main-header">
     <!-- <search></search> -->
-    <tabs className="index-tab" bindonChange="handlerTabChange"></tabs>
+    <tabs className="index-tab" tabs="{{tabs}}" activeKey="{{tabValue}}" bindonChange="handlerTabChange"></tabs>
   </view>
   <view class="main-body">
-	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="handlerToBottom" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="handlerToBottom" scroll-top="{{scrollTop}}">
     <list source="{{list}}"></list>
-    <view class="tc no-data" wx:if="{{pageIndex > 3}}">没有更多数据了</view>
+    <view class="tc no-data" wx:if="{{pageIndex > 2}}">我也是有底线的，不要再拉了！</view>
 	</scroll-view>
   </view>
 </view>
