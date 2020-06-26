@@ -1,8 +1,8 @@
   <view class="list-item" wx:for="{{source}}" wx:key="id">
   <!-- app-id="wx7564fd5313d24844" target="miniProgram"  open-type="navigate" -->
-  	<navigator class="df" style="width: 100%" url="/pages/detail/index?id={{item.id}}" extra-data="" version="release">
+  	<navigator class="df" style="width: 100%" url="/pages/detail/index?id={{item.id}}&type={{item.type}}" extra-data="" version="release">
   		<view class="item-left flex-vc">
-  			<image class="item-img" src="{{item.picSrc}}"></image>
+  			<image class="item-img" lazy-load="{{true}}" src="{{item.picSrc}}"></image>
   		</view>
   		<view class="item-right">
   			<view class="item-title">{{item.title}}</view>

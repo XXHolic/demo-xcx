@@ -4,7 +4,7 @@
     <view class="detail-title">{{title}}</view>
     <view class="detail-time">{{time}}</view>
     <view class="detail-content" wx:for="{{content}}" wx:key="index">
-        <image class="detail-img" mode="widthFix" src="{{item}}"></image>
+        <image wx:if="{{item}}" class="detail-img" lazy-load="{{true}}" mode="widthFix" src="{{item}}"></image>
     </view>
   </view>
 </view>

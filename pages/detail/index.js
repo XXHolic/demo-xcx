@@ -1,14 +1,14 @@
-const {reqDetailPre} = require('../../utils/util.js');
+const {reqDetailPre,detailImgPre} = require('../../utils/util.js');
 
 Page({
   data: {
     time:'',
-    content:[""],
+    content:[],
     title:''
   },
   onLoad (options) {
     // console.log('fds',options.id);
-    const id = options.id || '1294195';
+    const {id='1294195',type='0'} = options
     const _that = this;
     const reqUrl = `${reqDetailPre}${id}.json`;
     wx.request({
@@ -17,9 +17,15 @@ Page({
       success (res) {
         console.log('ds',res)
         const {title,time,content} = res.data;
+        let contentData = content;
+        // if (type === '1') {
+        //   contentData = content.map(ele => {
+        //     return `${detailImgPre}${ele}`
+        //   })
+        // }
         _that.setData({
           title,
-          content,
+          content:contentData,
           time:time.replace(/T/g,' ')
         });
       }

@@ -46,7 +46,8 @@ Page({
             picSrc,
             updateTime:time,
             count:commentsCount,
-            title:Title
+            title:Title,
+            type:type
           }
         })
         let newStateData = {
