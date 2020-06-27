@@ -2,7 +2,7 @@
 <view class="main-container">
   <view class="main-body">
     <view class="category-list flex-vc">
-      <view class="category-item f-dc flex-hc" wx:for="{{categoryList}}" wx:key="id" bindtap="handlerTap">
+      <view class="category-item f-dc flex-vc" wx:for="{{categoryList}}" wx:key="id" bindtap="handlerTap">
         <view class="category-icon"><image class="category-img" src="{{item.src}}"></image></view>
         <view class="tc">{{item.text}}</view>
       </view>

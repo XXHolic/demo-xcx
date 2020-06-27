@@ -2,40 +2,40 @@ Page({
   data: {
     categoryList:[
       {
-        id:1,
-        src:'/images/icon-movie.png',
-        text:'电影'
-      },
-      {
         id:2,
-        src:'/images/icon-video.png',
-        text:'动画'
+        src:'/images/category-2.jpg',
+        text:'快乐源泉'
       },
       {
         id:3,
-        src:'/images/icon-music.png',
-        text:'音乐'
+        src:'/images/category-3.png',
+        text:'星期一的烦恼'
       },
-      {
-        id:4,
-        src:'/images/icon-game.png',
-        text:'游戏'
-      },
-      {
-        id:5,
-        src:'/images/icon-fun.png',
-        text:'娱乐'
-      },
-      {
-        id:6,
-        src:'/images/icon-technology.png',
-        text:'科技'
-      },
-      {
-        id:7,
-        src:'/images/icon-trend.png',
-        text:'时尚'
-      },
+      // {
+      //   id:3,
+      //   src:'/images/icon-music.png',
+      //   text:'音乐'
+      // },
+      // {
+      //   id:4,
+      //   src:'/images/icon-game.png',
+      //   text:'游戏'
+      // },
+      // {
+      //   id:5,
+      //   src:'/images/icon-fun.png',
+      //   text:'娱乐'
+      // },
+      // {
+      //   id:6,
+      //   src:'/images/icon-technology.png',
+      //   text:'科技'
+      // },
+      // {
+      //   id:7,
+      //   src:'/images/icon-trend.png',
+      //   text:'时尚'
+      // },
     ]
   },
   handlerTap() {

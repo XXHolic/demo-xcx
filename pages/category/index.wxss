@@ -1,20 +1,24 @@
 .category-list {
-  flex-wrap:wrap;
+  /* flex-wrap:wrap; */
+  padding-top: 14rpx;
 }
 
 .category-item {
-  width: 25%;
+  width: 50%;
   height: 200rpx;
 }
 
 .category-icon {
+  overflow: hidden;
   margin-bottom: 14rpx;
-  height: 80rpx;
+  width: 210rpx;
+  border-radius: 20rpx;
 }
 
 .category-img {
   margin: 0 auto;
   display: block;
-  width: 80rpx;
-  height: 80rpx;
+  height: 200rpx;
+  width: 210rpx;
+  height: 189rpx;
 }
