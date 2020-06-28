@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/detail/index",
     "pages/category/index",
+    "pages/category-list/index",
     "pages/mine/index",
     "pages/logs/logs"
   ],

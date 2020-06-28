@@ -10,10 +10,6 @@
   height: 300rpx;
 }
 
-.no-data {
-  padding: 40rpx 0;
-}
-
 
 
 

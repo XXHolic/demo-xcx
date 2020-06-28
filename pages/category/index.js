@@ -3,11 +3,13 @@ Page({
     categoryList:[
       {
         id:2,
+        type:2,
         src:'/images/category-2.jpg',
         text:'快乐源泉'
       },
       {
         id:3,
+        type:3,
         src:'/images/category-3.png',
         text:'星期一的烦恼'
       },

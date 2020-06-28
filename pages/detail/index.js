@@ -4,7 +4,8 @@ Page({
   data: {
     time:'',
     content:[],
-    title:''
+    title:'',
+    isLoaded:false
   },
   onLoad (options) {
     // console.log('fds',options.id);
@@ -18,15 +19,11 @@ Page({
         console.log('ds',res)
         const {title,time,content} = res.data;
         let contentData = content;
-        // if (type === '1') {
-        //   contentData = content.map(ele => {
-        //     return `${detailImgPre}${ele}`
-        //   })
-        // }
         _that.setData({
           title,
           content:contentData,
-          time:time.replace(/T/g,' ')
+          time:time.replace(/T/g,' '),
+          isLoaded:true
         });
       }
     })

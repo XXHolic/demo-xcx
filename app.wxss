@@ -56,3 +56,7 @@ page {
 .tc {
   text-align: center;
 }
+
+.no-data {
+  padding: 40rpx 0;
+}

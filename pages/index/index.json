@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "search":"components/search/index",
-    "list":"components/list/index",
+    "list":"/components/list/index",
     "tabs":"/components/tabs/index"
   }
 }
