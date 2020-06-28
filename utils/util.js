@@ -211,10 +211,10 @@ const formatReqParms = (data) => {
   return params;
 }
 
-const reqListPre = 'https://xxholic.github.io/demo-images/data/ym/'
-const reqDetailPre = 'https://xxholic.github.io/demo-images/data/ym-detail/'
-// const detailImgPre = 'https://xxholic.github.io/demo-images/ym/detail/'
-const coverPre = 'https://xxholic.github.io/demo-images/ym/cover/'
+const reqListPre = 'https://www.xholic.cn/github/data/ym/'
+const reqDetailPre = 'https://www.xholic.cn/github/data/ym-detail/'
+// const detailImgPre = 'https://www.xholic.cn/github/ym/detail/'
+const coverPre = 'https://www.xholic.cn/github/ym/cover/'
 const reqListDataMap = {
   '0':`${reqListPre}list`,
   '1':`${reqListPre}jlist`,
