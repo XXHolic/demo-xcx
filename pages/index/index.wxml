@@ -7,6 +7,7 @@
   <view class="main-body">
 	<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="handlerToBottom" scroll-top="{{scrollTop}}">
     <list source="{{list}}"></list>
+    <loading show="{{showLoading}}"></loading>
     <view class="tc no-data" wx:if="{{pageIndex > 2}}">我也是有底线的，不要再拉了！</view>
 	</scroll-view>
   </view>

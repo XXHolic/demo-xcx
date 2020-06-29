@@ -2,6 +2,7 @@
   "usingComponents": {
     "search":"components/search/index",
     "list":"/components/list/index",
-    "tabs":"/components/tabs/index"
+    "tabs":"/components/tabs/index",
+    "loading":"/components/loading/index"
   }
 }

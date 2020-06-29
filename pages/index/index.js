@@ -5,6 +5,7 @@ const app = getApp()
 
 Page({
   data: {
+    showLoading:true,
     list:[],
     tabs:[
       {text:'头条',value:'0'},
@@ -26,7 +27,9 @@ Page({
       })
       return;
     }
-    
+    this.setData({
+      showLoading:true
+    })
     const _that = this;
     const reqUrl = `${reqListDataMap[type]}${pageNum}.json`;
     wx.request({
@@ -53,12 +56,17 @@ Page({
         let newStateData = {
           list:isChangeTab ? formatData:[...list,...formatData],
           pageIndex:pageNum,
-          tabValue:type
+          tabValue:type,
         }
         if (isChangeTab) {
           newStateData.scrollTop = 0;
         }
         _that.setData({...newStateData});
+      },
+      complete (){
+        _that.setData({
+          showLoading:false
+        })
       }
     })
   },
