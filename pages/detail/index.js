@@ -5,7 +5,8 @@ Page({
     time:'',
     content:[],
     title:'',
-    isLoaded:false
+    isLoaded:false,
+    showLoading:true
   },
   onLoad (options) {
     // console.log('fds',options.id);
@@ -25,6 +26,11 @@ Page({
           time:time.replace(/T/g,' '),
           isLoaded:true
         });
+      },
+      complete (){
+        _that.setData({
+          showLoading:false
+        })
       }
     })
   }

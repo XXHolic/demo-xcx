@@ -6,6 +6,7 @@
     <view class="detail-content" wx:for="{{content}}" wx:key="index">
         <image wx:if="{{item}}" class="detail-img" lazy-load="{{true}}" mode="widthFix" src="{{item}}"></image>
     </view>
+    <loading show="{{showLoading}}"></loading>
     <view wx:if="{{isLoaded}}" class="no-data tc">亲，没有了哦！</view>
   </view>
 </view>
