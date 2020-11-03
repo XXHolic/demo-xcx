@@ -1,5 +1,6 @@
 const {reqListDataMap,coverPre} = require('../../utils/util.js');
 
+
 //获取应用实例
 const app = getApp()
 
@@ -32,17 +33,19 @@ Page({
     })
     const _that = this;
     const reqUrl = `${reqListDataMap[type]}${pageNum}.json`;
+    // const reqUrl = 'https://www.bilibili.com';
     wx.request({
       method:'GET',
       url: reqUrl,
       success (res) {
-        // console.log('ds',res)
+        // console.info('ds',res)
         const {result} = res.data;
         const formatData = result.map(ele => {
           const {id,thumbnails,updateTime,commentsCount,Title} = ele;
           const imgSrc = thumbnails[0];
           const imgSrcSplit = imgSrc.split('/');
-          const picSrc = coverPre + imgSrcSplit[imgSrcSplit.length-1]
+          // const picSrc = coverPre + imgSrcSplit[imgSrcSplit.length-1]
+          const picSrc =  '';
           const time = updateTime.replace(/T/g,' ')
           return {
             id,
@@ -76,6 +79,7 @@ Page({
   },
   handlerTabChange({detail}){
     // console.log(detail.value)
+    throw new Error(`Regular exception no. ${Date.now()}`);
     this.getData({type:detail.value});
   },
   onShow() {
@@ -88,5 +92,6 @@ Page({
   },
   onReady() {
     this.getData({type:'0'});
+    
   }
 })

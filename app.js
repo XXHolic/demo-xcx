@@ -1,10 +1,35 @@
 //app.js
+const Argos = require('./utils/argos/index.js');
+Argos.init({url:'https://fundebug.com/wxjs/',enableLog: true})
+// debugger
+// var fundebug = require("./utils/fundebug.js");
+// fundebug.init({
+//     apikey: "8b82fd0ae1bd138623bf49e06a5f19a2f301fa1712c359e1346bda2d5190fc54"
+// });
 App({
   onLaunch: function () {
+    // var window = (function (){
+    //   return this
+    // })();
+    // console.info('ddddd',wx)
+    // Argos.init({url:"https://fundebug.com/wxjs/",enableLog:true})
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
+    // wx.getSystemInfoSync({
+    //   success: res => {
+    //     console.info('getSystemInfoSync',res)
+    //   }
+    // })
+
+    // wx.getSystemInfo({
+    //   success (res) {
+    //     console.log(res.version)
+    //     console.log(res.platform)
+    //   }
+    // })
 
     // 登录
     wx.login({
@@ -35,5 +60,10 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  onError: function(err) {
+    console.info('global error',err)
+    // console.info('global',err)
+    // Argos.captureException(err)
   }
 })
